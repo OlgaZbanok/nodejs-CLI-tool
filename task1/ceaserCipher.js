@@ -1,4 +1,5 @@
-module.exports.ceaserCipher = function ceaserCipher(str, amount, isEncode) {
+ function ceaserCipher(str, amount, isEncode) {
+ try {
   const shift = isEncode ? amount : (26 - amount) % 26;
 
   return String.fromCharCode(
@@ -14,4 +15,9 @@ module.exports.ceaserCipher = function ceaserCipher(str, amount, isEncode) {
       return code;
     })
   );
-};
+ } catch (error) {
+   console.error(`${error}`);
+   process.exit(1);
+ }
+}
+module.exports = ceaserCipher;
