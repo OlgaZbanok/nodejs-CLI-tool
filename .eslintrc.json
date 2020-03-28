@@ -85,6 +85,7 @@
                 "allowPattern": "^([a-z]+(_[a-z]+)+)|[A-Z]+|[A-Z]{1}[a-z]+$"
             }
         ],
+        "no-process-exit": 0,
         "eqeqeq": 2,
         "guard-for-in": 2,
         "no-alert": 1,
