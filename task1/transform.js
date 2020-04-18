@@ -7,7 +7,7 @@ try {
         transform: (chunk, encoding, done) => {
             const result = ceaserCipher(
                 chunk.toString(),
-                program.shift,
+                +program.shift,
                 program.action === 'encode'
             );
             done(null, result);
